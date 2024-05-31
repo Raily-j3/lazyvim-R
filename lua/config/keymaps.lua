@@ -39,11 +39,11 @@ map({ "n", "v" }, "K", "5k", { desc = "" })
 map({ "n", "t" }, "<C-j>", "5<C-e>", { desc = "" })
 map({ "n", "t" }, "<C-k>", "5<C-y>", { desc = "" })
 
-map({ "n" }, "<leader>m", function()
-    vim.cmd('vsplit ~/scratch.md')
-    vim.cmd('vertical res 80')
-    -- "<cmd>vsp ~/scratch.md<cr><cmd>vertical res 80<cr>"
-end, { desc = "" })
+-- map({ "n" }, "<leader>m", function()
+--     vim.cmd('vsplit ~/scratch.md')
+--     vim.cmd('vertical res 80')
+--     -- "<cmd>vsp ~/scratch.md<cr><cmd>vertical res 80<cr>"
+-- end, { desc = "" })
 
 -- other
 map("t", "<C-h>", "")
