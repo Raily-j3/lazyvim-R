@@ -34,6 +34,15 @@ return {
 
     require("telescope").setup({
       defaults = {
+        results_title = false,
+        sorting_strategy = "ascending", -- display results top->bottom
+        layout_config = {
+          horizontal = {
+            width = 0.9,
+            prompt_position = "top",
+            preview_width = 0.6,
+          },
+        },
         buffer_previewer_maker = new_maker, -- don't preview binary file
         mappings = {
           i = {
@@ -48,6 +57,9 @@ return {
       pickers = {
         find_files = {
           theme = "dropdown",
+          layout_config = {
+            center = { width = 0.5, height = 0.5 },
+          },
           previewer = false,
           -- find_command = { "fd", "-H" , "-I"},  -- "-H" search hidden files, "-I" do not respect to gitignore
           find_command = { "fd" }, -- "-H" search hidden files, "-I" do not respect to gitignore
@@ -55,12 +67,18 @@ return {
         },
         git_files = {
           theme = "dropdown",
+          layout_config = {
+            center = { width = 0.5, height = 0.5 },
+          },
           previewer = false,
           find_command = { "fd", "-H", "-I" }, -- "-H" search hidden files, "-I" do not respect to gitignore
           -- find_command = { "find", "-type", "f" },
         },
         oldfiles = {
           theme = "dropdown",
+          layout_config = {
+            center = { width = 0.5, height = 0.5 },
+          },
           previewer = false,
           find_command = { "fd", "-H", "-I" }, -- "-H" search hidden files, "-I" do not respect to gitignore
           -- find_command = { "find", "-type", "f" },
@@ -100,6 +118,7 @@ return {
             "Trait",
             "Field",
             "Property",
+            "Enum",
           },
         })
       end,
