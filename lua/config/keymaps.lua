@@ -29,6 +29,8 @@ map("n", "<leader>j", "<C-W>j", { desc = "" })
 map("n", "<leader>k", "<C-W>k", { desc = "" })
 map("n", "<leader>h", "<C-W>h", { desc = "" })
 map("n", "<leader>l", "<C-W>l", { desc = "" })
+map("n", "{", "[{", { desc = "" })
+map("n", "}", "]}", { desc = "" })
 
 -- cursor move
 map("n", "zz", "zt", { desc = "" })
