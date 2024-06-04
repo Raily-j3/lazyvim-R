@@ -34,14 +34,18 @@ return {
 
     require("telescope").setup({
       defaults = {
+        dynamic_preview_title = true,
+        path_display = { "shorten" },
         results_title = false,
         sorting_strategy = "ascending", -- display results top->bottom
         layout_config = {
           horizontal = {
-            width = 0.9,
+            -- width = 0.9,
             prompt_position = "top",
             preview_width = 0.6,
           },
+          width = { padding = 0 },
+          height = { padding = 0 },
         },
         buffer_previewer_maker = new_maker, -- don't preview binary file
         mappings = {
