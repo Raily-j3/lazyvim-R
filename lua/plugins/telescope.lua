@@ -83,6 +83,9 @@ return {
           find_command = { "fd", "-H", "-I" }, -- "-H" search hidden files, "-I" do not respect to gitignore
           -- find_command = { "find", "-type", "f" },
         },
+        lsp_document_symbols = {
+          symbol_width = 0.8,
+        },
       },
     })
   end,
